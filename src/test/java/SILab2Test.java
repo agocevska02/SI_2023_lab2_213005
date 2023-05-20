@@ -14,10 +14,9 @@ public class SILab2Test {
     @Test
     void everyBranchTest(){
 
+
         List<User> allUsers = createList();
         RuntimeException ex;
-        User u=new User("anastasija02@gmail.com","!@#SADSDSA","anastasija02@gmail.com");
-        allUsers.add(u);
        // 1 test case
         ex= assertThrows(RuntimeException.class,() -> SILab2.function(null,allUsers));
         assertTrue(ex.getMessage().contains("Mandatory information missing!"));
@@ -25,16 +24,19 @@ public class SILab2Test {
         User NullName = new User(null, "ani4e", "anastasija02@gmail.com");
         assertFalse(SILab2.function(NullName, allUsers));
         // 3 test case
-        User uSpecialSymbols=new User("anastasija","*proba*test&","finkigmail");
-        assertFalse(SILab2.function(uSpecialSymbols, allUsers));
+
+        allUsers.add(new User("gocevskaane","asdffaf","anastasija02@gmail.com"));
+        allUsers.add(new User("anastasija","ASDASD","gocevska@gmail.com"));
+        allUsers.add(new User("gocevskaane","asdffaf","gocevska@gmail.com@gmail.com"));
+        User u3=new User("gocevskaane","s oftfink","anastasija02.com");
+
+        assertFalse(SILab2.function(u3, allUsers));
 
         // 4 test case
-       User UserWithNoSymbolsInPass = new User("anastasija","finkiukimmk","anastasija002@gmail.com");
-        assertFalse(SILab2.function(UserWithNoSymbolsInPass,allUsers));
+       User u4 = new User("gocevskaane","*proba*test&","anastasija02@gmail.com");
+        assertFalse(SILab2.function(u4,allUsers));
 
-        //5 test case
-        User UserWithSpaceInPassword = new User("ane","finki softversko","anegmail@gmail.com");
-        assertFalse(SILab2.function(UserWithNoSymbolsInPass,allUsers));
+
 
 
     }
@@ -61,6 +63,10 @@ public class SILab2Test {
         User tfUser = new User("anastasija", "sacdascd12", null);
         ex= assertThrows(RuntimeException.class,() -> SILab2.function(existingUser,allUsers2));
         assertTrue(ex.getMessage().contains("Mandatory information missing!"));
+
+        //[F-F-F]
+        User u1=new User("anastasija","ASdsadasd","anastasijagocevska@gmail.com");
+        assertFalse(SILab2.function(u1,allUsers));
 
 
     }
