@@ -4,7 +4,7 @@
 ## Control Flow Graph
 
 
-![slika (2)](https://github.com/agocevska02/SI_2023_lab2_213005/assets/107998498/d2724f58-babd-4562-b20c-f4e6a435afb4)
+![Control Flow Graph](controlflow.jpg)
 
 
 
