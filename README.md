@@ -97,10 +97,12 @@
 
 > 4 test case:  
        User u4 = new User("gocevskaane","*proba*test&","anastasija02@gmail.com");  
-        assertFalse(SILab2.function(u4,allUsers));  
-> 5 test case:
-      User u5 = new User("gocevskaane","probatestT","anastasija02@gmail.com");
-        assertFalse(SILab2.function(u5,allUsers));
+        assertFalse(SILab2.function(u4,allUsers));   
+        
+        
+> 5 test case:    
+      User u5 = new User("gocevskaane","probatestT","anastasija02@gmail.com");  
+      assertFalse(SILab2.function(u5,allUsers));    
 
 Multiple condition
 Овој пример е за [T-X-X]  бидејќи првиот дел од условот е исполнет нема потреба да се разгледуваат другите делови. Бидејќи овој тест пример фрла исклучок потребно е тој исклучок да го фатиме па соодветно да ја провериме пораката дали е таа што ја очекувавме.
