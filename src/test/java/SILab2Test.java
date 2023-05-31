@@ -35,6 +35,10 @@ public class SILab2Test {
         // 4 test case
        User u4 = new User("gocevskaane","*proba*test&","anastasija02@gmail.com");
         assertFalse(SILab2.function(u4,allUsers));
+        
+          // 5 test case
+        User u5 = new User("gocevskaane","probatestT","anastasija02@gmail.com");
+        assertFalse(SILab2.function(u5,allUsers));
 
 
 
